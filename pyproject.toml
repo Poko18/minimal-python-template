@@ -1,0 +1,53 @@
+[project]
+name = "minimal-python-template"
+version = "0.0.1"
+description = "minimalistic starter template for Python projects."
+authors = [
+    { name = "Tadej Satler", email = "tadej.satler@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+license = { file = "LICENSE" }
+keywords = [
+    'python',
+    'template',
+    'python package',
+]
+
+classifiers=[
+    'Programming Language :: Python :: 3',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent',
+]
+
+dependencies = [
+    "pytest"
+]
+
+[project.urls]
+Homepage = "https://github.com/Poko18/minimal-python-template"
+Repository = "https://github.com/Poko18/minimal-python-template"
+
+[project.optional-dependencies]
+examples = []
+test = [
+    "pytest"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]
+
+[tool.ruff]
+line-length = 200
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["minimal-python-template"]
